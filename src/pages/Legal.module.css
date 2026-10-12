@@ -1,0 +1,48 @@
+.page {
+  padding-block: clamp(3rem, 2rem + 4vw, 6rem) var(--section);
+}
+
+.inner {
+  display: grid;
+  gap: var(--s-5);
+  max-width: calc(46rem + var(--gutter) * 2);
+}
+
+.title {
+  font-size: var(--fs-h1);
+}
+
+.notice {
+  display: flex;
+  gap: var(--s-3);
+  align-items: flex-start;
+  padding: var(--s-4) var(--s-5);
+  border: 1px solid #fedf89;
+  border-radius: var(--r-sm);
+  background: #fffaeb;
+  color: #7a2e0e;
+  font-size: 0.9375rem;
+}
+
+.notice svg {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.prose {
+  display: grid;
+  gap: var(--s-4);
+  margin-top: var(--s-4);
+  color: var(--ink-80);
+}
+
+.prose h2 {
+  margin-top: var(--s-5);
+  font-size: 1.25rem;
+}
+
+.prose a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

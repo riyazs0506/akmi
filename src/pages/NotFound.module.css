@@ -1,0 +1,26 @@
+.page {
+  padding-block: clamp(4rem, 3rem + 6vw, 9rem);
+}
+
+.inner {
+  display: grid;
+  gap: var(--s-5);
+  justify-items: start;
+  max-width: calc(40rem + var(--gutter) * 2);
+}
+
+.motif {
+  width: 56px;
+  height: auto;
+}
+
+.title {
+  font-size: var(--fs-h1);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  margin-top: var(--s-3);
+}

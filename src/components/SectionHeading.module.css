@@ -1,0 +1,27 @@
+.heading {
+  display: grid;
+  gap: var(--s-4);
+  max-width: 44rem;
+}
+
+.center {
+  margin-inline: auto;
+  text-align: center;
+  justify-items: center;
+}
+
+.title {
+  font-size: var(--fs-h2);
+}
+
+h1.title {
+  font-size: var(--fs-h1);
+}
+
+.body {
+  max-width: 38rem;
+}
+
+.body p + p {
+  margin-top: var(--s-4);
+}

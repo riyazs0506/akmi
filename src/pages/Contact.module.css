@@ -1,0 +1,128 @@
+.page {
+  padding-block: clamp(3rem, 2rem + 4vw, 6rem) var(--section);
+  background: linear-gradient(180deg, var(--warm) 0%, var(--white) 60%);
+}
+
+.grid {
+  display: grid;
+  gap: var(--s-8);
+  align-items: start;
+}
+
+.intro {
+  position: relative;
+  display: grid;
+  gap: var(--s-5);
+  max-width: 36rem;
+}
+
+.title {
+  font-size: var(--fs-h1);
+}
+
+.subhead {
+  margin-bottom: var(--s-3);
+  font-size: var(--fs-eyebrow);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-60);
+}
+
+.topics,
+.details {
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--line);
+}
+
+.topics {
+  margin-top: var(--s-3);
+}
+
+.topics ul {
+  display: grid;
+  gap: var(--s-2);
+  list-style: none;
+}
+
+.topics li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-weight: 500;
+}
+
+.topics li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 2px;
+  background: var(--blue);
+}
+
+.details ul {
+  display: grid;
+  gap: var(--s-4);
+  list-style: none;
+}
+
+.details li {
+  display: flex;
+  gap: var(--s-3);
+  align-items: flex-start;
+}
+
+.details a {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.detailIcon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: var(--r-sm);
+  background: var(--blue-50);
+  color: var(--blue);
+}
+
+.detailLabel {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.pending {
+  font-size: 0.9375rem;
+  font-style: italic;
+  color: var(--ink-60);
+}
+
+.motif {
+  display: none;
+}
+
+.formCard {
+  padding: clamp(1.25rem, 0.75rem + 2.5vw, 2.75rem);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: var(--white);
+  box-shadow: var(--shadow-md);
+}
+
+@media (min-width: 1000px) {
+  .grid {
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: var(--s-9);
+  }
+
+  .intro {
+    position: sticky;
+    top: calc(var(--header-h) + 2rem);
+  }
+}

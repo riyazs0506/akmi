@@ -1,0 +1,12 @@
+/* Isolation space: the brand book reserves clear space around the mark.
+   The padding keeps other elements away from the logo. */
+.logo {
+  display: inline-flex;
+  padding: 6px 0;
+  flex-shrink: 0;
+}
+
+.img {
+  height: var(--logo-h, 40px);
+  width: auto;
+}
