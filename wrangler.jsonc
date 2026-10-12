@@ -1,0 +1,18 @@
+// Cloudflare Workers static-assets deployment.
+// `npm run build` produces a fully prerendered static site in ./dist;
+// this config serves it as-is (no Worker script, no Vite plugin).
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "akmi",
+  "compatibility_date": "2026-10-06",
+  "assets": {
+    "directory": "./dist",
+    // /about serves dist/about/index.html (and /about/ redirects to /about)
+    "html_handling": "drop-trailing-slash",
+    // unknown routes serve dist/404.html with a 404 status
+    "not_found_handling": "404-page"
+  },
+  "observability": {
+    "enabled": true
+  }
+}

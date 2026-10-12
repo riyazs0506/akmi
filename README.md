@@ -13,6 +13,12 @@ npm run build     # client build + SSR build + prerender → dist/
 npm run preview   # serve dist/ at http://localhost:4173 (behaves like a static host)
 ```
 
+### Cloudflare (Workers static assets)
+
+`wrangler.jsonc` is committed, so Cloudflare's Git integration can use build command `npm run build` and deploy command `npx wrangler deploy`. It serves `dist/` as static assets with clean URLs and a real 404 page. Without this file, `wrangler deploy` auto-configures the project, adds `@cloudflare/vite-plugin`, and that breaks the prerender step.
+
+### Other hosts
+
 `dist/` is a fully static site. Deploy it to any static host (Netlify, Vercel, Cloudflare Pages, S3/CloudFront, nginx). Configure the host so that:
 
 - `/about` serves `/about/index.html` (clean URLs; this is the default on most hosts)
